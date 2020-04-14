@@ -23,7 +23,7 @@ raw_pattern = [[0,1], [3,2]]
 #FIXME: Use relative path instead
 
 
-# In[100]:
+# In[115]:
 
 
 def singleColorArray(target_color, arr, posx, posy):
@@ -76,10 +76,11 @@ def _intensity(dilution, boundaries, color):
     x, y, xlen, ylen, xctrl, yctrl, xlenctrl, ylenctrl = boundaries
     arr_a, black_a = read(dilution, x, y, xlen, ylen)
     arr_c, black_c = read(dilution, xctrl, yctrl, xlenctrl, ylenctrl)
-    a_val = bit_depth-(singleColorArray(color, arr_a, x, y).mean() - black_a)
-    c_val = bit_depth-(singleColorArray(color, arr_c, xctrl, yctrl).mean() - black_c)
+    a_val = (singleColorArray(color, arr_a, x, y).mean() - black_a)
+    c_val = (singleColorArray(color, arr_c, xctrl, yctrl).mean() - black_c)
     print(a_val, c_val)
-    return (np.log10(a_val/c_val), dilution)
+    print(np.log10(c_val/a_val))
+    return (np.log10(c_val/a_val), dilution)
 
 def c_intensity(dilution, color):
     return _intensity(dilution, get_boundaries(dilution), color)[0]
@@ -89,7 +90,7 @@ def intensity(dilution):
     return c_intensity(dilution, None)
 
 
-# In[71]:
+# In[116]:
 
 
 intensities = []
@@ -99,12 +100,12 @@ for dil in dilutions:
     intensities.append(intensity(dil))
     concentrations.append(1/dil)
 
-plt.plot(concentrations[1:], intensities[1:])
-slope, intercept, r_value, p_value, std_err = linregress(concentrations[1:], intensities[1:])
+plt.plot(concentrations[:], intensities[:])
+slope, intercept, r_value, p_value, std_err = linregress(concentrations[:], intensities[:])
 print("R: {}, p {}".format(r_value, p_value))
 
 
-# In[103]:
+# In[111]:
 
 
 for col in ["R","G","B"]:
@@ -116,8 +117,14 @@ for col in ["R","G","B"]:
         print(dil)
         intensities.append(c_intensity(dil, col))
         concentrations.append(1/dil)
-    plt.plot(concentrations[1:], intensities[1:], color=col)
+    plt.plot(concentrations[:], intensities[:], color=col)
     #FIXME: Before plotting convert to lowercase color letter
-    slope, intercept, r_value, p_value, std_err = linregress(concentrations[1:], intensities[1:])
+    slope, intercept, r_value, p_value, std_err = linregress(concentrations[:], intensities[:])
     print("R: {}, p {} \n\n".format(r_value, p_value))
+
+
+# In[ ]:
+
+
+
 
