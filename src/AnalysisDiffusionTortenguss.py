@@ -337,14 +337,4 @@ class DiffusionMeasurement:
         self.rasterized_x_coords = [n*row_height for n in enumerate(row_no)]
         rows = [self.main_pixels[n*row_height:(n+1)*row_height] for n in range(row_no)]
         self.rasterized_main = np.array(rows)
-        assert len(self.rasterized_x_coords) == len(list(self.rasterized_main))        
-            
-            
-            
-
-
-# In[ ]:
-
-
-
-
+        assert len(self.rasterized_x_coords) == len(list(self.rasterized_main))
