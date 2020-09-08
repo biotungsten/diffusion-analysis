@@ -1,6 +1,8 @@
 # diffusion-analysis
 This repository contains the code used to analyze the data (prevalently imagery data) of our diffusion measurements.
 
+**WARNING! This repository is at the moment not up to date and we can not guarantee, that all analyses are working. In case of questions leave an issue or contact biotungsten!**
+
 ## Overall structure
 
 In the `src` directory the source code is contained.
@@ -22,3 +24,4 @@ The `figures` directory contains all figures, generated during the analysis of t
 This source files in the `src`directory available under the GNU GENERAL PUBLIC LICENSE Version 3, if not otherwise stated.
 
 The imagery data are availabe under the Creative Commons Attribution 4.0 International. if not otherwise stated.
+
