@@ -17,3 +17,8 @@ The `pictures` directory contains all imagery data collected. Inside this direct
 The `pictures` dirnectory contains all imagery data collected. Inside this directory the folders are named by the time at which the image was taken. The `areas.csv` file indicates the areas inside the images containig data.
 
 The `figures` directory contains all figures, generated during the analysis of the data.
+
+## License
+This source files in the `src`directory available under the GNU GENERAL PUBLIC LICENSE Version 3, if not otherwise stated.
+
+The imagery data are availabe under the Creative Commons Attribution 4.0 International. if not otherwise stated.
