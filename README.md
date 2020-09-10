@@ -1,7 +1,7 @@
 # diffusion-analysis
 This repository contains the code used to analyze the data (prevalently imagery data) of our diffusion measurements.
 
-**WARNING! This repository is at the moment not up to date and we can not guarantee, that all analyses are working. In case of questions leave an issue or contact biotungsten!**
+**WARNING! This repository is at the moment not up to date and we can not guarantee, that all analyses are working. The .py versions of the notebooks are more up to date. In case of questions leave an issue or contact biotungsten!**
 
 ## Overall structure
 
