@@ -16,7 +16,7 @@ The `pictures` directory contains all imagery data collected. Inside this direct
 The `pictures` directory contains all imagery data collected. Inside this directory the folders are named by the diltuion (image x contains pictures of dilution 1:x).
 
 ### tortenguss-diffusion
-The `pictures` dirnectory contains all imagery data collected. Inside this directory the folders are named by the time at which the image was taken. The `areas.csv` file indicates the areas inside the images containig data.
+The directiry contains all imagery data collected. Inside this directory the images are named by the time at which the image was taken. The `areas.csv` file indicates the areas inside the images containig data. (for more details on this look into the correspondding jupyter notebook)
 
 The `figures` directory contains all figures, generated during the analysis of the data.
 
