@@ -20,7 +20,7 @@ Copyright (C) 2020 David Sauer
 
 # # Analyse Tortenguss
 # 
-# First you can find the imports and the picture paths. Currently absolute paths are used, so you **need to adjust this path** in order to get the code running. Furthermore picture specific properties such as the raw pattern are defined. They were read out manually. The showArray function can be used for debugging purposes.
+# First you can find the imports and the picture paths. It is assumed your cwd is the directory containing the images. Furthermore picture specific properties such as the raw pattern are defined. They were read out manually. The showArray function can be used for debugging purposes.
 
 # In[2]:
 
@@ -35,7 +35,7 @@ from matplotlib import pyplot as plt
 from scipy.stats import linregress
 
 cwd = os.getcwd()
-images = 
+images = cwd
 areas = images + "areas.csv"
 color_desc = {0: "R", 1: "G", 2: "B", 3: "G"}
 raw_pattern = [[1,0], [2,3]]
