@@ -23,6 +23,7 @@ Copyright (C) 2020 David Sauer
 
 import numpy as np
 import os
+import sys
 import matplotlib.pyplot as plt
 import cv2
 from scipy import stats
@@ -31,7 +32,7 @@ import random
 
 
 # In[74]:
-
+# It is assumed that the first argument is the path to the picture directory, and the second one the path to the figure directory.
 
 def string_conc(s):
     if s == "CTRL":
@@ -43,8 +44,8 @@ def r_string_conc(i):
         return "CTRL"
     return str(i)
 
-PICTURE_PATH = "/Users/David_Sauer/Documents/Biophysik/diffusion-analysis/pictures/"
-FIGURE_PATH = "/Users/David_Sauer/Documents/Biophysik/diffusion-analysis/figures/"
+PICTURE_PATH = sys.argv[1]
+FIGURE_PATH = sys.argv[2]
 CONCENTRATIONS = [string_conc(f) for f in os.listdir(PICTURE_PATH) if (os.path.isfile(os.path.join(PICTURE_PATH, f))==False)&(str(f) != '.DS_Store')]
 CONCENTRATIONS.sort()
 CONCENTRATIONS_N = {c: len(os.listdir(PICTURE_PATH+r_string_conc(c)))-1 for c in CONCENTRATIONS}
