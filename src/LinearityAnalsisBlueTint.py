@@ -25,13 +25,14 @@ import numpy as np
 import rawpy
 import matplotlib.pyplot as plt
 import csv
+import os
 from scipy.stats import linregress
 
 
 # In[25]:
 
 
-images = "/Users/David_Sauer/Documents/Biophysik/diffusion-analysis/experiments/tinte-blau-april/pictures/"
+images = os.getcwd()
 areas = images + "areas.csv"
 bit_depth = 2**12
 dilutions = [500,750,1000,2000,4000,8000]
